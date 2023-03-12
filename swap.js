@@ -3,7 +3,7 @@
 
 document.querySelector('#clickme').addEventListener('click', function() {
     const myText = document.querySelector('textarea').value;
-    const myChar = myText.length;
+    const myChar = myText.match(/[a-zA-Z]/g).join('').length;
     const myWord = myText.split(" ").filter(s => s.length > 0).length;
     const mySentence = myText.split(".").filter(s => s.length > 0).length;
     console.log(myChar, myWord, mySentence );
